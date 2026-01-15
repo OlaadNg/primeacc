@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMEACC - Your Committed Financial, Tax Advisor & Business Consulting Services</title>
+    <meta name="description" content="PRIMEACC provides comprehensive accounting, tax, and business consulting services to help your business thrive. Expert financial solutions tailored to your needs.">
+    <meta name="keywords" content="accounting, tax services, business consulting, financial planning, bookkeeping, payroll services">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#1e3a8a",
+                        accent: "#3b82f6",
+                        light: "#f8fafc",
+                        dark: "#1e293b"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-xl">P</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-primary">PRIME<span class="text-secondary">ACC</span></h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">About</a>
+                    <a href="#team" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Team</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
+                        Get Consultation
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                    <a href="#team" class="text-gray-700 hover:text-primary font-medium">Team</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-secondary transition-colors duration-200 w-full">
+                        Get Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+                        Your Committed Financial, <span class="text-primary">Tax Advisor</span> & Business Consulting Services
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        PRIMEACC provides comprehensive Financial Solutions, Tax Advisory and Business Consultation to help you and your business thrive. 
+                        Our team of certified professionals offers tailored accounting, tax planning, and 
+                        business consulting services to drive your success.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
+                            Get Started Today
+                        </button>
+                        <button class="border-2 border-primary text-primary px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-200">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://picsum.photos/600/400?random=1" 
+                        alt="Business professionals discussing financial strategies" 
+                        class="rounded-xl shadow-xl w-full"
+                        loading="lazy"
+                    >
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg w-3/4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Financial Growth</h4>
+                                <p class="text-gray-600 text-sm">Strategic planning for business expansion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive financial services designed to meet the unique needs of your business
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: CFO + Client Advisory -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-500">
+                    <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">CFO + Client Advisory</h3>
+                    <p class="text-gray-700 mb-6">
+                        Strategic financial guidance and enhanced processes to empower you to achieve your business goals with confidence.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Strategic Finance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Financial Reporting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Process Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Cash Flow Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">M&A and Carve-outs</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2: Audit & Assurance -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300 border-l-4 border-green-500">
+                    <div class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-check-circle text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-900">Audit & Assurance</h3>
+                    <p class="text-gray-700 mb-6">
+                        Enable better decision making and foster stakeholder trust through comprehensive financial statements and forecasts.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Financial Statement: Compilation, Review & Audits</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Forecasts, Projection & Cash Flow Analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Operational Analysis</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3: Tax -->
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300 border-l-4 border-orange-500">
+                    <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-900">Tax</h3>
+                    <p class="text-gray-700 mb-6">
+                        Comprehensive tax planning services to optimize tax outcomes, ensure compliance, and mitigate risks effectively.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-600 mr-2"></i>
+                            <span class="text-gray-700">Tax Planning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-600 mr-2"></i>
+                            <span class="text-gray-700">Tax Preparation & Compliance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-600 mr-2"></i>
+                            <span class="text-gray-700">Tax Structuring</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-600 mr-2"></i>
+                            <span class="text-gray-700">Tax Controversy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-orange-600 mr-2"></i>
+                            <span class="text-gray-700">International Tax</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-orange-600 font-medium hover:text-orange-800 flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4: Family Office -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300 border-l-4 border-purple-500">
+                    <div class="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-purple-900">Family Office</h3>
+                    <p class="text-gray-700 mb-6">
+                        Tailored financial guidance for families, empowering them to grow their wealth, legacy, and long-term goals.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span class="text-gray-700">Financial Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span class="text-gray-700">Financial Operations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span class="text-gray-700">Trust & Estate</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-600 mr-2"></i>
+                            <span class="text-gray-700">Charity Planning</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-purple-600 font-medium hover:text-purple-800 flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Employment Service -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300 border-l-4 border-red-500">
+                    <div class="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-red-900">Employment Service</h3>
+                    <p class="text-gray-700 mb-6">
+                        Connect top talent with outstanding career opportunities that match their skills, experience, and career aspirations.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-600 mr-2"></i>
+                            <span class="text-gray-700">Job Opportunities</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-800 flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">About PRIMEACC</h2>
+                    <p class="text-gray-600 mb-6">
+                        PRIMEACC is a trusted partner for individuals, families, 
+                        and businesses seeking comprehensive financial advisory services. Our team brings decades of combined experience in CFO services, Audit and Assurance, Tax Strategy, Family Office Management and Employment Services.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        We believe in building long-term relationships with our clients, understanding their unique 
+                        challenges, and providing tailored solutions that drive real results. Our commitment to 
+                        excellence and attention to detail sets us apart in the industry.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-2">15+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                    </div>
+
+                    <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
+                        Our Story
+                    </button>
+                </div>
+                <div>
+                    <img 
+                        src="https://picsum.photos/600/500?random=2" 
+                        alt="PRIMEACC team meeting in modern office" 
+                        class="rounded-xl shadow-xl w-full"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Meet Our Team</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Our team of certified professionals brings extensive experience and expertise to every client engagement
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center">
+                    <div class="mb-6">
+                        <img 
+                            src="https://picsum.photos/200?random=3" 
+                            alt="Sarah Johnson - CEO & Founder" 
+                            class="rounded-full w-40 h-40 object-cover mx-auto"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+                    <p class="text-primary font-medium mb-4">CEO & Founder</p>
+                    <p class="text-gray-600 text-sm">
+                        Certified Public Accountant with 20+ years of experience in financial management and business strategy.
+                    </p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="text-center">
+                    <div class="mb-6">
+                        <img 
+                            src="https://picsum.photos/200?random=4" 
+                            alt="Michael Chen - Tax Director" 
+                            class="rounded-full w-40 h-40 object-cover mx-auto"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+                    <p class="text-primary font-medium mb-4">Tax Director</p>
+                    <p class="text-gray-600 text-sm">
+                        Tax specialist with expertise in corporate taxation, international tax planning, and compliance.
+                    </p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="text-center">
+                    <div class="mb-6">
+                        <img 
+                            src="https://picsum.photos/200?random=5" 
+                            alt="Emily Rodriguez - Senior Accountant" 
+                            class="rounded-full w-40 h-40 object-cover mx-auto"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emily Rodriguez</h3>
+                    <p class="text-primary font-medium mb-4">Senior Accountant</p>
+                    <p class="text-gray-600 text-sm">
+                        Expert in financial reporting, audit preparation, and accounting system implementation.
+                    </p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="text-center">
+                    <div class="mb-6">
+                        <img 
+                            src="https://picsum.photos/200?random=6" 
+                            alt="David Wilson - Business Consultant" 
+                            class="rounded-full w-40 h-40 object-cover mx-auto"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">David Wilson</h3>
+                    <p class="text-primary font-medium mb-4">Business Consultant</p>
+                    <p class="text-gray-600 text-sm">
+                        Strategic business advisor specializing in growth planning, process optimization, and financial analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Client Testimonials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    See what our clients have to say about our services and commitment to excellence
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jennifer Martinez</h4>
+                            <p class="text-gray-600 text-sm">CEO, TechSolutions Inc.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "PRIMEACC transformed our financial operations. Their strategic tax planning saved us 
+                        over 30% in tax liabilities last year. Highly recommended!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Robert Thompson</h4>
+                            <p class="text-gray-600 text-sm">Founder, GreenEnergy Co.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "The business consulting services from PRIMEACC helped us streamline operations and 
+                        increase profitability by 25% in just six months."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Amanda Lee</h4>
+                            <p class="text-gray-600 text-sm">Owner, CreativeDesign Studio</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">
+                        "As a small business owner, I was overwhelmed with bookkeeping. PRIMEACC took care of 
+                        everything with precision and professionalism. A true partner in our success."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8">
+                        Ready to take your business to the next level? Contact us today for a free consultation 
+                        and discover how PRIMEACC can help you achieve your financial goals.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Our Office</h4>
+                                <p class="text-gray-600">123 Financial District, Suite 500<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone Number</h4>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Address</h4>
+                                <p class="text-gray-600">info@primeacc.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-200">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-200">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-200">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-light p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-blue-200 outline-none transition-colors duration-200" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-blue-200 outline-none transition-colors duration-200" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-blue-200 outline-none transition-colors duration-200">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-blue-200 outline-none transition-colors duration-200">
+                                <option value="">Select a service</option>
+                                <option value="accounting">CFO + Client Advisory</option>
+                                <option value="tax">Audit & Assurance</option>
+                                <option value="consulting">Tax</option>
+                                <option value="other">Family Office</option>
+                                <option value="other">Employment Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-blue-200 outline-none transition-colors duration-200" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-primary font-bold text-xl">P</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">PRIME<span class="text-blue-300">ACC</span></h2>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Providing expert CFO + Client Advisory, Audit & Assurance, Tax, Family Offices and Employment Services. Consulting services to help businesses thrive and achieve financial success.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-200">About Us</a></li>
+                        <li><a href="#team" class="text-gray-300 hover:text-white transition-colors duration-200">Our Team</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">CFO + Client Advisory</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Audit & Assurance</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Tax</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Family Office</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">Employment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span>123 Financial District, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(+234) 123-45678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@primeacc.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2023 PRIMEACC. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    service: document.getElementById('service').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // In a real application, you would send this data to a server
+                console.log('Form submitted:', formData);
+                
+                // Show success message
+                alert('Thank you for your message! We will get back to you soon.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+
+        // Navigation active state
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+        
+        function setActiveLink() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-semibold');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'font-semibold');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', setActiveLink);
+        
+        // Initialize active state on page load
+        setActiveLink();
+    </script>
+</body>
+</html>
